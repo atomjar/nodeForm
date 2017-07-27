@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="/" method="post">
+        <div class="header">
+          <span class="title">Sign Up For My Web App</span>
+        </div>
+        <div class="fields" id="fields">
+          <input type="text" name="name" placeholder="Enter your name" />
+          <input type="email" name="email" placeholder="Email" />
+          <input type="text" name="birthyear" placeholder="Year of Birth" />
+          <select name="position">
+            <option value="manager">Technical Manager</option>
+            <option value="developer">Developer</option>
+            <option value="ui-designer">UI Designer</option>
+            <option value="graphic-designer">Graphic Designer</option>
+          </select>
+          <input type="password" name="password" placeholder="Enter a password" />
+        </div>
+        <div class="footer">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <ul>
+      {{ #errors }}
+        <li>{{ msg }} value: {{ value }}</li>
+      {{ /errors }}
+    </ul>
+  </body>
+</html>
